@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "./rpc";
+
+service Cart {
+  rpc Demo(DemoReq) returns (DemoResp);
+}
+// 模板请求
+message DemoReq {
+  string name = 1;
+}
+// 模板响应
+message DemoResp {
+  string demo = 1;
+}
+
